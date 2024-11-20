@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/registro.css">
+    <title>Registro</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="registro.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <center>
+                <img src="../Image/Tienda de Mascotas.png" alt="Logo" width="300">
+                <h1>Registrarse</h1>
+            </center>
+        </header>
+        <main>
+            <div class="Formulario">
+                <center>
+                    <form @submit.prevent="register">
+                        <label for="Nombre">Nombre:</label>
+                        <br>
+                        <input type="text" name="Nombre" id="Name" class="campo" v-model="nombre">
+                        <br><br>
+                        <label for="Tipodocumento">Tipo de documento:</label>
+                        <br>
+                        <select name="Tipodocumento" id="Tipodocumento" v-model="tipoDocumento">
+                            <option>Cédula de ciudadanía</option>
+                            <option>Cédula extranjera</option>
+                            <option>Tarjeta de identidad</option>
+                            <option>Otro</option>
+                        </select>
+                        <br><br>
+                        <label for="Cedula">Número de identificación:</label>
+                        <br>
+                        <input type="number" name="Cedula" id="Cedula" class="campo" v-model="cedula">
+                        <br><br>
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <br>
+                        <input type="date" name="Fecha" id="nacimiento" class="campo" v-model="nacimiento">
+                        <br><br>
+                        <label for="sexo">Sexo:</label>
+                        <br>
+                        <input type="radio" name="sexo" value="Masculino" v-model="sexo" class="campo"> Masculino
+                        <br>
+                        <input type="radio" name="sexo" value="Femenino" v-model="sexo" class="campo"> Femenino
+                        <br><br>
+                        <label for="email">Correo electrónico:</label>
+                        <br>
+                        <input type="email" name="Email" id="email" class="campo" v-model="email">
+                        <br><br>
+                        <label for="emailc">Confirme su correo electrónico:</label>
+                        <br>
+                        <input type="email" name="Emailc" id="emailc" class="campo" v-model="emailConfirm">
+                        <br><br>
+                        <label for="celular">Número de celular:</label>
+                        <br>
+                        <input type="number" name="Celular" id="celular" class="campo" v-model="celular">
+                        <br><br>
+                        <label for="Mascotas">Número de mascotas que posee:</label>
+                        <br>
+                        <select name="Mascotas" id="Mascotas" v-model="mascotas">
+                            <option>Seleccione</option>
+                            <option>Ninguna</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>Más de 5</option>
+                        </select>
+                        <br><br>
+                        <label for="contraseña">Ingrese una contraseña:</label>
+                        <br>
+                        <input type="password" name="Contraseña" id="contraseña" class="campo" v-model="contraseña">
+                        <br><br>
+                        <label for="Confirmarcontraseña">Confirme la contraseña:</label>
+                        <br>
+                        <input type="password" name="Confirmar" id="Confirmarcontraseña" class="campo" v-model="contraseñaConfirm">
+                        <br><br>
+                        <button type="button" @click="navigateTo('Iniciodelsistema.html')" class="boton">Cancelar</button>
+                        <button type="submit" class="boton">Registrarse</button>
+                    </form>
+                </center>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap">
+    <title>Detalles del Producto</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Playpen Sans', cursive;
+            background-color: #f5f5f5;
+            background-image: url("../Image/Patronnaranja.png");
+            background-repeat: repeat;
+        }
+        #producto img {
+            border: 1px solid #ff9900;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <label for="productSearch">Buscar Producto:</label>
+    <select id="productSearch" onchange="redirectToProduct()" style="padding: 5px; margin-left: 10px;">
+        <option value="">Seleccione un producto...</option>
+        <option value="Bozal para perro.html">Bozal para perro</option>
+<option value="Comida para Gato.html">Comida para gato</option>
+<option value="Comida para perro.html">Comida para perro</option>
+<option value="Correa para perro.html">Correa para perro</option>
+    </select>
+</div>
+<script>
+    function redirectToProduct() {
+        const selectedProduct = document.getElementById("productSearch").value;
+        if (selectedProduct) {
+            window.location.href = selectedProduct;
+        }
+    }
+</script>
+
+    <div id="app" class="container">
+        <header class="bg-warning text-white text-center py-4">
+            <h1>Bozal Para Perros</h1>
+        </header>
+        <main class="text-left my-5">
+            <section id="producto" class="card p-4 mb-4">
+                <div id="imagen" class="text-center">
+                    <img src="Imagenes/descarga.jpg" alt="Bozal para Perros" class="img-fluid mb-3">
+                </div>
+                <div id="informacion">
+                    <h2>Información del Producto</h2>
+                    <p>Bozal Siliconado Suave Tipo canastilla para perro...</p>
+                    <p>Cantidad Disponible: 510 unidades</p>
+                    <p>Precio: $58.63</p>
+                    <p>Método de Entrega: Envío estándar</p>
+                    <details>
+                        <summary>Lugares Disponibles para Envío:</summary>
+                        <ul>
+                            <li>Yopal</li>
+                            <li>Tauramena</li>
+                            <li>Bogotá</li>
+                            <li>Monterrey</li>
+                            <li>Bucaramanga</li>
+                        </ul>
+                    </details>
+                </div>
+                <!-- Pasamos el producto de manera explícita -->
+                <button @click="agregarAlCarrito({ id: 1, nombre: 'Bozal para perro', precio: 58.63 })" class="btn btn-warning mt-3">Agregar al Carrito</button>
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="Correa para perro.html" class="btn btn-primary">Anterior Producto</a>
+                    <a href="../Paginaprincipalp.html" class="btn btn-secondary">Inicio</a>
+                    <a href="Comida para Gato.html" class="btn btn-primary">Siguiente producto</a>
+                </div>
+            </section>
+
+            <!-- Carrito de compras -->
+            <section id="carrito" class="mb-5">
+                <h2>Carrito de Compras</h2>
+                <div v-if="carrito.length === 0" class="alert alert-info">El carrito está vacío.</div>
+                <div v-else>
+                    <div v-for="(producto, index) in carrito" class="producto-carrito mb-2">
+                        <div class="d-flex justify-content-between">
+                            <p>{{ producto.nombre }} - ${{ producto.precio }}</p>
+                            <button @click="eliminarDelCarrito(index)" class="btn btn-danger btn-sm">Eliminar</button>
+                        </div>
+                    </div>
+                    <p><strong>Total: ${{ totalCarrito }}</strong></p>
+                </div>
+            </section>
+
+            <!-- Búsqueda -->
+            <section>
+                <h3>Buscar Productos</h3>
+                <input type="text" v-model="busqueda" class="form-control mb-3" placeholder="Buscar productos por nombre">
+            </section>
+
+            <!-- Reseñas -->
+            <section class="reseña card p-4">
+                <h3>Reseñas de Usuarios</h3>
+                <div v-for="reseña in reseñas" class="reseña-individual mb-3">
+                    <p>Opinión: {{ reseña.opinion }}</p>
+                    <p>Por: {{ reseña.usuario }}</p>
+                </div>
+                <div class="mt-4">
+                    <h4>Agregar una reseña</h4>
+                    <textarea v-model="nuevaReseña" class="form-control" placeholder="Escribe tu opinión"></textarea>
+                    <button @click="agregarReseña" class="btn btn-warning mt-3">Agregar Reseña</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-warning text-white text-left p-4">
+            <h2>Contáctanos</h2>
+            <p>Nombre: William Esneider Medina Colina</p>
+            <p>Teléfono: +123456789</p>
+            <p>Email: william@example.com</p>
+            <p>Dirección: Cra.58 #134a-99, Ciudad Canina</p>
+        </footer>
+    </div>
+    <script src="Bozalparaperro.js" defer></script>
+
+    <div id="cart">
+        <h3>Carrito de Compras</h3>
+        <div v-for="(item, index) in $store.state.carrito" :key="index" class="cart-item">
+            <p>{{ item.name }} - ${{ item.price.toFixed(2) }}</p>
+            <button @click="$store.commit('eliminarDelCarrito', index)">Eliminar</button>
+        </div>
+        <p>Total: ${{ $store.getters.totalCarrito }}</p>
+    </div>
+</body>
+
+</html>

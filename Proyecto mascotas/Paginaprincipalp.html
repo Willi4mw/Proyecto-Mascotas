@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Proyecto mascotas/CSS/Style.css">
+    <title>Página Principal</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="paginaprincipalp.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="horizontal_menu">
+                <ul>
+                    <li><a href="#Video">Qué somos</a></li>
+                    <li><a href="#Blogmascotas">Nuestras causas</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                    <li v-if="!isLoggedIn"><a href="Registro/Iniciodelsistema.html">Iniciar sesión</a></li>
+                    <li v-if="isLoggedIn"><a href="#" @click.prevent="logout">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+            <center>
+                <img src="Image/Tienda de Mascotas.png" alt="Logo">
+                <h1><i><n>Conócenos un poco</n></i></h1>
+            </center>
+        </header>
+        <main>
+            <div class="Inicio_video">
+                <iframe id="Video" width="900" height="720" class="video" src="https://www.youtube.com/embed/2cGp7__bNZ8" title="Cachorros Husky Siberiano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nec tortor interdum congue. Mauris ac interdum est, nec dictum purus. Curabitur porttitor faucibus eros, non consequat orci fermentum in. Aliquam suscipit volutpat ipsum, finibus mattis metus tincidunt in. Sed urna lacus, laoreet nec lectus at, elementum eleifend augue. Nulla facilisi. Morbi vel fermentum sapien, ut tristique nulla. Aliquam erat volutpat. Nullam porttitor, lacus posuere semper egestas, felis mauris rhoncus ligula, et tristique eros lacus eu sapien. Morbi vehicula est odio, in iaculis ipsum pretium vitae. Vivamus id neque et odio sodales egestas in vitae mi. Etiam ullamcorper sem in consequat pulvinar. Proin ullamcorper dolor massa, et finibus tortor sodales vitae.
+                    Nullam eu posuere ex. Aliquam pellentesque sit amet nisl in laoreet. Mauris eu viverra sapien. Vestibulum consequat laoreet leo id efficitur. Pellentesque vel nulla lobortis, aliquet nisi et, facilisis tellus. Proin bibendum, nulla id dignissim venenatis, metus nulla imperdiet est, nec maximus dolor dui id urna. Maecenas semper, tortor congue consectetur porta, dui nisi congue elit, non tristique metus augue a elit. Morbi ullamcorper mauris quis nulla fermentum, eu euismod tortor posuere.
+                </p>
+                <center>
+                    <input type="button" value="Más Información" class="boton">
+                </center>
+            </div>
+            <br><br><br>
+            <center>
+                <br><br><br><br><br><br><br><br><br>
+                <h2>Algunas de las causas que apoyamos</h2>
+            </center>
+            <div class="Pequeñas_Huellas">
+                <div class="zona-1">
+                    <div class="content">
+                        <img src="Image/img_cachorros-primeros-auxilios-1200x550-cc.jpg" class="imagen" width="375" alt="Adopción de mascotas">
+                        <h2><n>Adopción de mascotas</n></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a iste sequi eius in corrupti commodi! Tempore officia in inventore, perferendis vel dicta sunt, ipsam officiis impedit laboriosam, deserunt omnis!
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita adipisci, dolore quibusdam eaque sunt voluptas excepturi, saepe debitis eius ex sed fugit est totam mollitia iusto maiores! Minus, facere.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt id nobis expedita voluptatum eligendi ipsam, officiis placeat commodi soluta rem mollitia dolor, maxime quibusdam eum consequatur nisi sequi animi.
+                        </p>
+                    </div>
+                </div>
+                <div class="zona-1">
+                    <div class="content">
+                        <img id="Blogmascotas" src="Image/cachorro-1.jpg" class="imagen" alt="Comida para mascotas de la calle" width="375">
+                        <h2><n>Comida para mascotas de la calle</n></h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum tempora officiis at nobis provident quisquam, dicta sequi sit nostrum aliquam. Delectus nostrum doloremque autem suscipit voluptas nobis modi placeat quo?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum reprehenderit eveniet impedit optio alias ducimus non. Delectus asperiores quo accusantium velit qui. Ea fuga quas eum odit explicabo sed sapiente!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil beatae eligendi dolor iusto deleniti? Voluptatem tempora ipsa tenetur velit ipsam ad sint! Ex, nam quidem consequatur consequuntur officia aspernatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="zona-1">
+                    <div class="content">
+                        <img src="Image/Grupodepersonas.jpg" class="imagen" alt="Apoyo a organizaciones de cuidado de mascotas" width="375">
+                        <h2><n>Apoyo a organizaciones de cuidado de mascotas</n></h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ratione veniam quibusdam maiores, nihil voluptatibus blanditiis placeat explicabo perspiciatis alias inventore quis. Vero nobis molestias officia iusto cumque? Doloribus, cupiditate!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi harum hic natus at quia libero ad, quasi possimus quo maxime! Perspiciatis fugiat eos esse maxime magnam harum asperiores qui aliquam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquid ducimus optio, voluptate id commodi necessitatibus assumenda rem deserunt, vitae, qui cum eos voluptates excepturi porro! Ducimus explicabo officiis hic!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores animi, enim officia atque quas explicabo voluptatibus eum nam impedit aspernatur? Quas praesentium eligendi odio nam deserunt odit qui quos dolorum?
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, perferendis consectetur! Consectetur dicta cupiditate doloribus necessitatibus nulla nesciunt, illum illo recusandae sed earum inventore. Placeat sapiente repellat magni cupiditate ipsam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <center>
+                <h1>Más huellitas, más sonrisas</h1>
+                <br><br><br>
+                <a href="../Proyecto mascotas/Productos/Comida para perro.html">
+                    <input type="button" value="Productos" class="boton">
+                </a>
+            </center>
+            <br><br><br>
+        </main>
+        <footer>
+            <div class="Final_de_pagina">
+                <h2><b>Contacto</b></h2>
+                <p><b>Dirección:</b> Cra.58 #134a-99</p>
+                <p><b>Tel/Cel:</b> 932 123 123</p>
+                <p><b>Horario:</b> Lunes-viernes: 07:00-17:00<br>Sabado y Domingo: 09:00-13:00</p>
+                <p><b>Correo electrónico:</b> william@example.com<br>juliandchavesj@homail.com</p>
+                <center>
+                    <img id="Contacto" src="Image/Tienda de Mascotas.png" width="250" alt="Contacto">
+                </center>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+body {
+    background-image: url("../Image/Patronnaranja.png");
+    background-repeat: repeat;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 900;
+    background-color: #f5f5f5; /* Fondo más claro */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Alinea todo el texto a la izquierda */
+}
+
+header {
+    background-color: #ff6600; /* Naranja */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Alinea todo el texto a la izquierda */
+}
+
+.boton {
+    background-color: #ff6600; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; 
+}
+
+.boton:hover {
+    background-color: #ff5500; /* Naranja más oscuro */
+}
+
+#producto {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#imagen {
+    text-align: center;
+}
+
+#imagen img {
+    max-width: 100%;
+    border: 1px solid #ff9900; /* Borde naranja */
+    border-radius: 5px;
+}
+
+#informacion {
+    margin-top: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#informacion h2 {
+    color: #333;
+}
+
+#informacion p {
+    margin: 10px 0;
+}
+
+#agregar-al-carrito {
+    background-color: #ff6600; /* Naranja */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; /* Alinea el botón a la izquierda */
+}
+
+#agregar-al-carrito:hover {
+    background-color: #ff5500; /* Naranja más oscuro */
+}
+
+#vendedor {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#vendedor h2 {
+    color: #333;
+}
+
+#contacto {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#contacto h2 {
+    color: #333;
+}
+
+.reseña {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.reseña h3 {
+    color: #333;
+}
+
+.reseña p {
+    margin: 10px 0;
+}
+
+#escribir-reseña {
+    margin-top: 20px;
+    background-color: #f5f5f5; /* Gris claro */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#escribir-reseña h3 {
+    color: #333;
+}
+
+#escribir-reseña textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #ff6600; /* Naranja */
+    text-align: left; /* Alinea todo el texto del footer a la izquierda */
+    padding: 10px;
+}

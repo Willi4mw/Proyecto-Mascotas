@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+body {
+    background-image: url("../Image/Patronnaranja.png");
+    background-repeat: repeat;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 900;
+    background-color: #f5f5f5; /* Fondo más claro */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Alinea todo el texto a la izquierda */
+}
+
+.img {
+    max-width: 320px;
+    float: left;
+}
+
+.Inicio_de_sesió {
+    width: 400px;
+    background-color: #ff6600;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: right;
+    text-decoration: none;
+}
+
+.boton {
+    background-color: #fff; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; 
+}
+
+.boton:hover {
+    background-color: #ff5500; 
+}
+
+.link {
+    text-decoration: none;
+}
+
+.campo {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #333;
+}
+
+.texto label {
+    font-size: 16px;
+}
+
+.texto input {
+    font-size: 16px;
+}
+
+/* Bootstrap Overrides */
+.container {
+    max-width: 1200px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #ff6600; /* Naranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #ff5500; /* Naranja más oscuro */
+}
+
+.form-control-custom {
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.card-custom {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-center-custom {
+    text-align: center;
+}
+
+.bg-orange {
+    background-color: #ff6600; /* Naranja */
+}

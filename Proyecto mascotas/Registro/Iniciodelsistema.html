@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+    <title>Inicio de sesión</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="Iniciodelsistema.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <center>
+                <img src="../Image/Tienda de Mascotas.png" width="300" alt="Logo">
+                <h1>Inicio de sesión</h1>
+            </center>
+        </header>
+        <main>
+            <div class="Inicio_de_sesión"> 
+                <center>
+                    <div class="texto"> 
+                        <img src="../Image/Perritoempresario.jpg" width="350" alt="Imagen de perrito empresario">
+                        <br>
+                        <form @submit.prevent="login">
+                            <label for="Usuario">Ingrese su usuario:</label>
+                            <br>
+                            <input type="text" name="Usuario" id="Usuario" class="campo" v-model="usuario">
+                            <br>
+                            <label for="Contraseña">Contraseña:</label>
+                            <br>
+                            <input type="password" name="Contraseña" id="Contraseña" class="campo" v-model="contraseña">
+                            <br>
+                            <a href="Olvidecontrseña.html" class="link">Olvidé mi contraseña</a>
+                            <br><br>
+                            <input type="radio" name="Recordar" v-model="recordar" class="campo"> Recordarme
+                            <br><br>
+                            <button type="submit" class="boton">Ingresar</button>
+                            <br><br>
+                            <button type="button" @click="navigateTo('../Paginaprincipalp.html')" class="boton">Inicio</button>
+                        </form>
+                        <br>
+                        <a href="Registro.html" class="link">Registrarse</a>
+                    </div>
+                </center>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

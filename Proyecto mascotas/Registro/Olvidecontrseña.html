@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/contraseña.css">
+    <title>Olvidé mi contraseña</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="Olvidecontrseña.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <center>
+                <img src="../Image/Tienda de Mascotas.png" width="300" alt="Logo">
+                <h1>Nueva Contraseña</h1>
+            </center>
+        </header>
+        <main>
+            <div class="Nueva_contraseña">
+                <center>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="Email">Ingrese su correo electrónico:</label>
+                                    <br><br>
+                                    <input type="email" name="Email" id="Email" v-model="email">
+                                    <br><br>
+                                    <button @click="enviarCorreo" class="boton">Enviar correo</button>
+                                    <br><br>
+                                    <button type="button" @click="navigateTo('../Paginaprincipalp.html')" class="boton">Inicio</button>
+                                </td>
+                                <td>
+                                    <img src="../Image/Registronuevo.jpg" width="200" alt="Imagen de registro">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

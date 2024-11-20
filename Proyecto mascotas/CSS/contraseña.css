@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Playpen+Sans:wght@200&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+body {
+    background-image: url("../Image/Patronnaranja.png");
+    background-repeat: repeat;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 900;
+}
+
+.boton {
+    background-color: #fff; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; 
+}
+
+.boton:hover {
+    background-color: #ff5500; 
+}
+
+.navbar {
+    background-color: #f8f9fa; 
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px; 
+}
+
+.navbar-nav .nav-link {
+    color: #333; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff5500; 
+}
+
+.footer {
+    background-color: #f8f9fa; 
+    padding: 20px 0;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
